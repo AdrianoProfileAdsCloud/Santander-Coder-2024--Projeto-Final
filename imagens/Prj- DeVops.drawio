@@ -1,0 +1,75 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36" version="25.0.1">
+  <diagram name="Page-1" id="9vnL-uWb5xDTHgym6zV4">
+    <mxGraphModel dx="880" dy="443" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" background="#f8f1f1" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="G_mka4sQV5-5KmohU_VA-1" value="&lt;span style=&quot;font-size: 18px;&quot;&gt;Arquitetura da Solução&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="257" y="75" width="360" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="G_mka4sQV5-5KmohU_VA-8" value="&lt;span style=&quot;text-wrap-mode: wrap; background-color: initial;&quot;&gt;Chamada ao Serviço&lt;/span&gt;&lt;br&gt;&lt;div style=&quot;text-wrap-mode: wrap;&quot;&gt;&amp;nbsp;Interface API&lt;/div&gt;&lt;div style=&quot;text-wrap-mode: wrap;&quot;&gt;&amp;nbsp;(Responsável por Realizar o Upload para o Bucket)&lt;/div&gt;" style="aspect=fixed;sketch=0;html=1;dashed=0;whitespace=wrap;verticalLabelPosition=middle;verticalAlign=middle;fillColor=#2875E2;strokeColor=#ffffff;points=[[0.005,0.63,0],[0.1,0.2,0],[0.9,0.2,0],[0.5,0,0],[0.995,0.63,0],[0.72,0.99,0],[0.5,1,0],[0.28,0.99,0]];shape=mxgraph.kubernetes.icon2;prIcon=api;align=left;whiteSpace=wrap;horizontal=1;labelPosition=right;" parent="1" vertex="1">
+          <mxGeometry x="326" y="206.4" width="91" height="91" as="geometry" />
+        </mxCell>
+        <mxCell id="G_mka4sQV5-5KmohU_VA-53" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="G_mka4sQV5-5KmohU_VA-9" target="G_mka4sQV5-5KmohU_VA-51" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="G_mka4sQV5-5KmohU_VA-9" value="&lt;span style=&quot;text-wrap-mode: wrap;&quot;&gt;S3 -&amp;nbsp;&lt;/span&gt;&lt;div style=&quot;padding-right: 5px;&quot;&gt;&lt;span style=&quot;text-wrap-mode: wrap;&quot;&gt;Armazena o arquivo no bucket de Armazenamento em Nuvem&lt;/span&gt;&lt;/div&gt;" style="outlineConnect=0;dashed=0;verticalLabelPosition=middle;verticalAlign=middle;align=right;html=1;shape=mxgraph.aws3.bucket_with_objects;fillColor=#E05243;gradientColor=none;labelPosition=left;" parent="1" vertex="1">
+          <mxGeometry x="341.5" y="332" width="60" height="61" as="geometry" />
+        </mxCell>
+        <mxCell id="G_mka4sQV5-5KmohU_VA-59" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="G_mka4sQV5-5KmohU_VA-28" target="G_mka4sQV5-5KmohU_VA-32" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="G_mka4sQV5-5KmohU_VA-69" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="G_mka4sQV5-5KmohU_VA-28" target="G_mka4sQV5-5KmohU_VA-68" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="G_mka4sQV5-5KmohU_VA-28" value="&lt;div style=&quot;text-align: justify;&quot;&gt;Lambida&lt;/div&gt;&lt;ul style=&quot;margin-top: 5px; margin-right: 0px; padding-left: 20px; margin-bottom: 2px;&quot;&gt;&lt;li style=&quot;text-align: justify;&quot;&gt;Consome mensagens do SQS.&lt;/li&gt;&lt;li style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Realiza o download do arquivo.&lt;/span&gt;&lt;/li&gt;&lt;li style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Conta o número de linhas.&lt;/span&gt;&lt;/li&gt;&lt;li style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Conecta-se ao banco de dados.&lt;/span&gt;&lt;/li&gt;&lt;li style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Registra o&amp;nbsp; nome do arquivo e o numero&amp;nbsp;&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;div style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;de linhas contidos&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;no banco de dados.&lt;/span&gt;&lt;/div&gt;&lt;/span&gt;" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=left;html=1;shape=mxgraph.aws3.lambda_function;fillColor=#5294CF;gradientColor=none;labelPosition=right;horizontal=1;" parent="1" vertex="1">
+          <mxGeometry x="369" y="475" width="60" height="63" as="geometry" />
+        </mxCell>
+        <mxCell id="G_mka4sQV5-5KmohU_VA-32" value="ElasticCache(Poderia&lt;div&gt;ser um RDB)&lt;/div&gt;" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.elasticache;fillColor=#2E73B8;gradientColor=none;" parent="1" vertex="1">
+          <mxGeometry x="152" y="471" width="59" height="71" as="geometry" />
+        </mxCell>
+        <mxCell id="G_mka4sQV5-5KmohU_VA-46" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="G_mka4sQV5-5KmohU_VA-8" target="G_mka4sQV5-5KmohU_VA-9" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="G_mka4sQV5-5KmohU_VA-48" value="Usuário, ou requisicão&amp;nbsp;&lt;div&gt;direta de outra API&lt;/div&gt;" style="shape=umlActor;verticalLabelPosition=middle;verticalAlign=middle;html=1;outlineConnect=0;labelPosition=left;align=right;textDirection=ltr;" parent="1" vertex="1">
+          <mxGeometry x="137" y="228" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="G_mka4sQV5-5KmohU_VA-51" value="SQS Garantirá&lt;div&gt;&lt;ul style=&quot;margin-top: 2px; padding-bottom: 0px; padding-left: 0px; margin-bottom: 2px;&quot;&gt;&lt;li&gt;Resiliência&lt;/li&gt;&lt;li&gt;Escalabilidade&lt;/li&gt;&lt;li&gt;Monitoramento&lt;/li&gt;&lt;li&gt;Integridade dos Dados&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=left;html=1;shape=mxgraph.aws3.sqs;fillColor=#D9A741;gradientColor=none;" parent="1" vertex="1">
+          <mxGeometry x="548" y="325.5" width="57" height="74" as="geometry" />
+        </mxCell>
+        <mxCell id="G_mka4sQV5-5KmohU_VA-55" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="G_mka4sQV5-5KmohU_VA-51" target="G_mka4sQV5-5KmohU_VA-28" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="697" y="363" />
+              <mxPoint x="697" y="507" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="G_mka4sQV5-5KmohU_VA-58" value="" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.cloudwatch;fillColor=#759C3E;gradientColor=none;" parent="1" vertex="1">
+          <mxGeometry x="357.75" y="820" width="82.5" height="93" as="geometry" />
+        </mxCell>
+        <mxCell id="G_mka4sQV5-5KmohU_VA-60" value="" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/other/Grafana.svg;" parent="1" vertex="1">
+          <mxGeometry x="559" y="843" width="68" height="52.800000000000004" as="geometry" />
+        </mxCell>
+        <mxCell id="G_mka4sQV5-5KmohU_VA-65" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=-0.022;entryY=0.455;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="G_mka4sQV5-5KmohU_VA-58" target="G_mka4sQV5-5KmohU_VA-60" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="G_mka4sQV5-5KmohU_VA-70" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="G_mka4sQV5-5KmohU_VA-68" target="G_mka4sQV5-5KmohU_VA-58" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="G_mka4sQV5-5KmohU_VA-68" value="SNS -&amp;nbsp;Após processar, a&amp;nbsp;&lt;div&gt;Lambda envia notificações&lt;/div&gt;" style="outlineConnect=0;dashed=0;verticalLabelPosition=middle;verticalAlign=middle;align=right;html=1;shape=mxgraph.aws3.sns;fillColor=#D9A741;gradientColor=none;labelPosition=left;textDirection=ltr;" parent="1" vertex="1">
+          <mxGeometry x="360.75" y="678" width="76.5" height="76.5" as="geometry" />
+        </mxCell>
+        <mxCell id="iaqE4pb0RmpG9-7AMvtu-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="iaqE4pb0RmpG9-7AMvtu-2" target="G_mka4sQV5-5KmohU_VA-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="iaqE4pb0RmpG9-7AMvtu-2" value="Sistema Web&amp;nbsp;" style="image;points=[];aspect=fixed;html=1;align=center;shadow=0;dashed=0;image=img/lib/allied_telesis/computer_and_terminals/Personal_Computer.svg;" vertex="1" parent="1">
+          <mxGeometry x="229" y="221" width="45.6" height="61.800000000000004" as="geometry" />
+        </mxCell>
+        <mxCell id="iaqE4pb0RmpG9-7AMvtu-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=-0.022;entryY=0.599;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="G_mka4sQV5-5KmohU_VA-48" target="iaqE4pb0RmpG9-7AMvtu-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
